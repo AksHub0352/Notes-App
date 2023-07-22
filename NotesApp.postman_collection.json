@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "72b7e2d0-1fe2-4a6d-82be-bab5cc4cd817",
+		"name": "NotesApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28693363"
+	},
+	"item": [
+		{
+			"name": "findAll()",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerifyPostRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewNote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/Expenses/150000%20expense on Bike Purchase.",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"Expenses",
+						"150000%20expense on Bike Purchase."
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddNewNote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Title\" : \"Sales\",\n    \"Content\" : \"15% more than Last Month\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/add/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"add",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateANote",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Title",
+							"value": "Groceries",
+							"type": "text"
+						},
+						{
+							"key": "Content",
+							"value": "Surf,Biscuit",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/64bba372c950b0484cc34a1c",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"64bba372c950b0484cc34a1c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{base_url}}/64bbbe1e7a0002e7c79bbe54",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"64bbbe1e7a0002e7c79bbe54"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:4000",
+			"type": "string"
+		}
+	]
+}
